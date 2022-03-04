@@ -16,5 +16,8 @@ Study happy~
 ## Interesting Repositories
 [gyyang nn-brain](https://github.com/gyyang/nn-brain)  Code for Task representations in neural networks trained to perform many cognitive tasks
 
+## Toturial Codes
 [ggyang multitasks](https://github.com/gyyang/multitask) Tutorial codes for modeling brains with neural nets
+
+[Pillowlab_GLM](https://github.com/pillowlab/GLMspiketraintutorial_python) Tutorial on Gaussian and Poisson generalized linear models (GLMs) for spike train data
  
