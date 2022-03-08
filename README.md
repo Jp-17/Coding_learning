@@ -24,6 +24,9 @@ Study happy~
 
 [byon_yu correlation-maps](https://github.com/joao-semedo/canonical-correlation-maps)  Code for "Feedforward and feedback interactions between visual cortical areas use different population activity patterns", Semedo et al. (Nature Communications, 2022) 
 
+[pillow_2017_mtlipGLM](https://github.com/jcbyts/mtlipglm)  Code for "Functional dissection of signal and noise in MT and
+LIP during decision-making (2017 pillow  Nat.Neuro)"
+
 ## Datasets
 [Allensdk neuropixels dataset](https://allensdk.readthedocs.io/en/latest/visual_coding_neuropixels.html)  The Visual Coding – Neuropixels project uses high-density extracellular electrophysiology (Ecephys) probes to record spikes from a wide variety of regions in the mouse brain. 
 
