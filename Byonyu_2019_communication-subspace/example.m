@@ -115,7 +115,7 @@ cvOptions = statset('crossval');
 
 % If the MATLAB parallel toolbox is available, uncomment this line to
 % enable parallel cross-validation.
-% cvOptions.UseParallel = true;
+cvOptions.UseParallel = true;
 
 % Regression method to be used.
 regressMethod = @ReducedRankRegress;
