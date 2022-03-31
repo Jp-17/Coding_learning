@@ -35,5 +35,5 @@ LIP during decision-making (2017 pillow  Nat.Neuro)"
 ## Model Learning Practice
 [GLM_allen_learn](https://github.com/Jp-17/Coding_learning/blob/main/Model_learning/GLM_allen_learn.ipynb)  Try to use GLM to analysis Allendata, which refer to [NMA_CN_GLMs for Encoding](https://compneuro.neuromatch.io/tutorials/W1D4_GeneralizedLinearModels/student/W1D4_Tutorial1.html)
 
-[]
+[CCA_allen_learn](https://github.com/Jp-17/Coding_learning/blob/main/Model_learning/CCA_allen_learn.ipynb)  Try to use CCA to analysis Allendata, which refer to [canonical_correlation_analysis](https://github.com/gwgundersen/ml/blob/master/canonical_correlation_analysis.py)
  
