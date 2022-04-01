@@ -1,6 +1,6 @@
 # Introduction
 
-A repository for learning computation neuroscience~
+A repository for learning computational neuroscience~
 
 Study happy~
 
