@@ -15,7 +15,7 @@ argIn.MaxDelay = 10;    % 100ms
 argIn.TimeStep = 4;     % 40ms
 argIn.WindowLength = 8; % 80ms
 
-%argIn.NumWorkers = Inf; % Requires Parallel Processing Toolbox
+argIn.NumWorkers = Inf; % Requires Parallel Processing Toolbox
 
 disp(argIn)
 argOut = ComputeCorrMap(spikes, expCond, argIn);
