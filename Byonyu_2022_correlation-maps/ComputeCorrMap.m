@@ -226,7 +226,7 @@ for i = 1:numTimePoints
         , argIn.BinWidth );
     T = size(auxResidsX, 2);
     
-    X = Squash( auxResidsX )';
+    X = Squash( auxResidsX )';     % [units_num, window_length*trial_num]
     
     t2 = max(t1 - argIn.MaxDelay, 1):min(t1 + argIn.MaxDelay, mapDim);
     
