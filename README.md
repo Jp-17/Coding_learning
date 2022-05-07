@@ -1,11 +1,8 @@
 # Introduction
 
-A repository for learning computational neuroscience~
+A repository for exploring computational neuroscience~
 
 Study happy~
-
-try
-
 
 # Contents
 
