@@ -231,8 +231,33 @@ drift_stim_table = session.get_stimulus_table('drifting_gratings')
 # areas = ['VISp', 'VISrl', 'VISl', 'VISal', 'VISpm', 'VISam', 'LGd', 'LP']
 areas = ['VISp', 'VISrl']
 # units_area = get_units_area(areas, session)
-intra_dim_area = get_intra_dim_area(areas, stim_table=drift_stim_table)
+# intra_dim_area = get_intra_dim_area(areas, stim_table=drift_stim_table)
 # np.save('intra_dim_area_755434585', intra_dim_area)
 
 # intra_dim_area = np.load('intra_dim_area_755434585.npy')
 # plot_intra_dim_areas(areas, units_area, intra_dim_area)
+
+import time
+start = time.time()
+# 你程序运行的核心函数，可以不用把所有数据都跑完，抽出大概10个循环就可以，下面是举个例子
+# X = np.randon.rand((100, 100))
+# for i in range(10): # 重复10次取平均值
+#     transformer = FactorAnalysis(n_components=7, random_state=0)
+#     X_transformed = transformer.fit_transform(X)
+#     X_transformed.shape
+
+intra_dim_area = get_intra_dim_area(areas, stim_table=drift_stim_table)
+
+stop = time.time()
+print(f"Time per iteration: {(stop - start)/10}s")
+
+# no program running: 5%CPU, 0%MEM, 5.73G/504G
+
+# no retrict cpu kernels: 4800%CPU, 7.95G/504G Mem, time 141.5s
+
+# OMP_NUM_THREADS=2: 200%CPU, 0.5%MEM, 7.98G/504G, time 160.5s
+# OMP_NUM_THREADS=8: 800%CPU, 0.5%MEM, 8.00G/504G, time 136.8s
+# OMP_NUM_THREADS=16: 1600%CPU, 0.5%MEM, 8.07G/504G, time s
+# OMP_NUM_THREADS=32: 800%CPU, 0.5%MEM, 8.00G/504G, time s
+# OMP_NUM_THREADS=64: 800%CPU, 0.5%MEM, 8.00G/504G, time s
+# OMP_NUM_THREADS=90: 800%CPU, 0.5%MEM, 8.00G/504G, time s
