@@ -124,41 +124,33 @@ def get_intra_dim_area(areas, stim_table):
 
     return intra_dim_area
 
-# basepath = "/home/jialab/Allensdk_data/local/ecephys_cache_dir/"
-# manifest_path = os.path.join(basepath, "manifest.json")
-# cache = EcephysProjectCache.from_warehouse(manifest=manifest_path)
+basepath = "/home/jialab/Allensdk_data/local/ecephys_cache_dir/"
+manifest_path = os.path.join(basepath, "manifest.json")
+cache = EcephysProjectCache.from_warehouse(manifest=manifest_path)
 
-# sessions = cache.get_session_table()
-# session_ids = [719161530, 750332458, 750749662, 754312389, 755434585, 756029989, 791319847, 797828357]
-# selected_sessions = {}
+sessions = cache.get_session_table()
+session_ids = [719161530, 750332458, 750749662, 754312389, 755434585, 756029989, 791319847, 797828357]
+selected_sessions = {}
 
-# for i, session_id in enumerate(session_ids):
-#     session = cache.get_session_data(session_id)
-#     selected_sessions[session_id] = session
-# session = selected_sessions[755434585]
-# drift_stim_table = session.get_stimulus_table('drifting_gratings')
+for i, session_id in enumerate(session_ids):
+    session = cache.get_session_data(session_id)
+    selected_sessions[session_id] = session
+session = selected_sessions[755434585]
+drift_stim_table = session.get_stimulus_table('drifting_gratings')
 
-# areas = ['VISp', 'VISrl']
+areas = ['VISp', 'VISrl']
 
-# import time
-# start = time.time()
-# intra_dim_area = get_intra_dim_area(areas, stim_table=drift_stim_table)
-# stop = time.time()
-# print(f"Time per iteration: {stop - start}s")
+import time
+start = time.time()
+intra_dim_area = get_intra_dim_area(areas, stim_table=drift_stim_table)
+stop = time.time()
+print(f"Time per iteration: {stop - start}s")
 
-# when run only one python file, "try_cpu.py"
 # no program running: 5%CPU, 0%MEM, 5.73G/504G
-# no retrict cpu kernels: 4800%CPU, 0.5%MEM, 7.95G/504G Mem, time 1415s
+# no retrict cpu kernels: 4800%CPU, 7.95G/504G Mem, time 1415s
 # OMP_NUM_THREADS=2: 200%CPU, 0.5%MEM, 7.98G/504G, time 1605s
 # OMP_NUM_THREADS=8: 800%CPU, 0.5%MEM, 8.00G/504G, time 1368s
 # OMP_NUM_THREADS=16: 1600%CPU, 0.5%MEM, 8.07G/504G, time 1356s
 # OMP_NUM_THREADS=32: 3200%CPU, 0.5%MEM, 8.16G/504G, time 1403s
 # OMP_NUM_THREADS=64: 4800%CPU, 0.5%MEM, 8.31G/504G, time 1616s
 # OMP_NUM_THREADS=90: 4800%CPU, 0.5%MEM, 8.32G/504G, time 1597s. (Error: nthreads cannot be larger than environment variable "NUMEXPR_MAX_THREADS" (64))
-
-# when add another python file, "try_cpu.py_1"
-# "try_cpu.py_0" 3665678 OMP_NUM_THREADS=16: 1600%CPU, 0.5%MEM, 8.37G/504G, time 1065s
-# "try_cpu_1.py" 3671170 OMP_NUM_THREADS=16: 1600%CPU, 0.5%MEM, 10.8G/504G, time 1574s
-
-
-print("a")
